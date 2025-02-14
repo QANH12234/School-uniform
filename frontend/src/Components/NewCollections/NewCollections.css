@@ -1,0 +1,242 @@
+.new-collections {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 40px 20px;
+    max-width: 1440px;
+    margin: 0 auto 60px;
+}
+
+.collections-header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.new-collections h1 {
+    color: #171717;
+    font-size: 2.5rem;
+    font-weight: 600;
+    margin: 0;
+}
+
+.new-collections hr {
+    width: 100px;
+    height: 4px;
+    border: none;
+    border-radius: 2px;
+    background: #1e88e5;
+    margin: 0 0 20px;
+}
+
+.view-controls {
+    display: flex;
+    gap: 10px;
+}
+
+.view-btn {
+    padding: 8px 12px;
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.2s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.view-btn:hover {
+    border-color: #1e88e5;
+    color: #1e88e5;
+}
+
+.view-btn.active {
+    background: #1e88e5;
+    color: white;
+    border-color: #1e88e5;
+}
+
+.view-btn .icon {
+    font-size: 1.2rem;
+}
+
+/* Grid View */
+.collections.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 30px;
+    width: 100%;
+}
+
+/* List View */
+.collections.list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+}
+
+.collections.list .collection-item-wrapper {
+    width: 100%;
+}
+
+.collections.list .item {
+    display: grid;
+    grid-template-columns: 250px 1fr;
+    height: auto;
+    gap: 20px;
+}
+
+.collections.list .item-image {
+    padding-top: 100%;
+}
+
+.collections.list .item-details {
+    padding: 20px;
+}
+
+.collections.list .item-description {
+    -webkit-line-clamp: 3;
+}
+
+/* Collection Item Wrapper */
+.collection-item-wrapper {
+    position: relative;
+}
+
+.new-badge {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    background: #e53935;
+    color: white;
+    padding: 4px 12px;
+    border-radius: 4px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    z-index: 1;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Loading & Error States */
+.loading, .error, .no-collections {
+    text-align: center;
+    padding: 40px;
+    color: #666;
+}
+
+.error {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.retry-button {
+    padding: 10px 25px;
+    background-color: #1e88e5;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: all 0.2s;
+}
+
+.retry-button:hover {
+    background-color: #1976d2;
+    transform: translateY(-1px);
+}
+
+/* Responsive Design */
+@media (max-width: 1280px) {
+    .new-collections h1 {
+        font-size: 2.2rem;
+    }
+
+    .collections.grid {
+        gap: 25px;
+    }
+
+    .collections.list .item {
+        grid-template-columns: 200px 1fr;
+    }
+}
+
+@media (max-width: 1024px) {
+    .new-collections {
+        padding: 30px 20px;
+    }
+
+    .new-collections h1 {
+        font-size: 2rem;
+    }
+
+    .collections.grid {
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+        gap: 20px;
+    }
+
+    .collections.list .item {
+        grid-template-columns: 180px 1fr;
+        gap: 15px;
+    }
+}
+
+@media (max-width: 768px) {
+    .new-collections {
+        padding: 20px 15px;
+    }
+
+    .new-collections h1 {
+        font-size: 1.8rem;
+    }
+
+    .collections.grid {
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+        gap: 15px;
+    }
+
+    .collections.list .item {
+        grid-template-columns: 140px 1fr;
+        gap: 12px;
+    }
+
+    .collections.list .item-details {
+        padding: 12px;
+    }
+}
+
+@media (max-width: 480px) {
+    .new-collections h1 {
+        font-size: 1.5rem;
+    }
+
+    .collections.grid {
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+        gap: 10px;
+    }
+
+    .collections.list .item {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .collections.list .item-image {
+        width: 100%;
+        padding-top: 100%;
+    }
+
+    .view-btn {
+        padding: 6px 10px;
+    }
+
+    .view-btn .icon {
+        font-size: 1rem;
+    }
+}

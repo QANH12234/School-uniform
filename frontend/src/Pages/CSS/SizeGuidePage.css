@@ -1,0 +1,46 @@
+.size-guide-page {
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    min-height: calc(100vh - 140px); /* Account for header and footer */
+}
+
+.back-nav-button {
+    display: flex;
+    align-items: center;
+    background: none;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 16px;
+    color: #333;
+    margin-bottom: 20px;
+    transition: color 0.3s ease;
+}
+
+.back-nav-button:hover {
+    color: #007bff;
+}
+
+.back-icon {
+    font-size: 20px;
+    margin-right: 8px;
+}
+
+.size-guide-content {
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .size-guide-page {
+        padding: 10px;
+    }
+    
+    .size-guide-content {
+        padding: 15px;
+    }
+} 

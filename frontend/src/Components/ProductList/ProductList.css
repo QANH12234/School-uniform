@@ -1,0 +1,154 @@
+.product-list-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 40px;
+}
+
+.product-list-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+.category-info h1 {
+    font-size: 1.8em;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.product-count {
+    color: #666;
+    font-size: 0.9em;
+}
+
+.product-filters {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.filter-group {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.filter-group label {
+    color: #666;
+    font-size: 0.9em;
+}
+
+.sort-select,
+.display-select {
+    padding: 8px 12px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    background-color: white;
+    color: #333;
+    font-size: 0.9em;
+    cursor: pointer;
+    min-width: 120px;
+}
+
+.sort-select:focus,
+.display-select:focus {
+    outline: none;
+    border-color: #1e88e5;
+}
+
+.view-toggle {
+    display: flex;
+    gap: 5px;
+}
+
+.view-btn {
+    padding: 8px 12px;
+    border: 1px solid #ddd;
+    background: white;
+    color: #666;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.view-btn:hover,
+.view-btn.active {
+    background: #1e88e5;
+    color: white;
+    border-color: #1e88e5;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 40px;
+    margin: 0 0 60px 0;
+}
+
+.product-grid.list-view {
+    grid-template-columns: 1fr;
+}
+
+.product-grid.list-view .item {
+    width: 100%;
+    display: flex;
+    margin: 0;
+}
+
+.product-grid.list-view .item-image {
+    width: 300px;
+    height: 300px;
+}
+
+.product-grid.list-view .item-details {
+    flex: 1;
+    padding: 30px;
+}
+
+.load-more {
+    text-align: center;
+    margin-top: 40px;
+}
+
+.load-more button {
+    padding: 12px 30px;
+    background-color: #1e88e5;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.load-more button:hover {
+    background-color: #1976d2;
+}
+
+@media (max-width: 1400px) {
+    .product-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 1024px) {
+    .product-list-container {
+        padding: 30px;
+    }
+    
+    .product-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px;
+    }
+}
+
+@media (max-width: 640px) {
+    .product-list-container {
+        padding: 20px;
+    }
+    
+    .product-grid {
+        grid-template-columns: repeat(1, 1fr);
+        gap: 24px;
+    }
+} 
